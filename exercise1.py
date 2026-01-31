@@ -20,3 +20,5 @@ print(data.loc[data.Units=="Dollars (millions)"])
 data.loc[data.Units=="Dollars (millions)","Variable_code"] = "H10"
 print(data.loc[:,["Units","Variable_code"]])
 
+mean = data.Units.mean()
+data.Units.map(lambda p:p-mean)
